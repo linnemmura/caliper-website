@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Информация о штангенциркулях - видах, применении и особенностях">
+    <title>Штангенциркуль - измерительный инструмент</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        nav {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style-type: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        main section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: #667eea;
+            border-bottom: 3px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #e74c3c;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            border: 3px solid #667eea;
+        }
+        
+        figure {
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        figcaption {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 8px;
+            font-size: 0.95rem;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e8f4f8;
+            transition: background-color 0.3s ease;
+        }
+        
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 25px 0;
+        }
+        
+        .type-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #f39c12;
+        }
+        
+        .type-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        
+        aside {
+            background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #f39c12;
+        }
+        
+        footer {
+            background: linear-gradient(45deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #f39c12;
+        }
+        
+        strong {
+            color: #e74c3c;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 8px 0;
+            }
+            
+            .types-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            main section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Штангенциркуль: точность в каждом измерении</h1>
+        <p>Универсальный измерительный инструмент для точных работ</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">Что такое штангенциркуль</a></li>
+            <li><a href="#types">Виды штангенциркулей</a></li>
+            <li><a href="#usage">Применение</a></li>
+            <li><a href="#care">Уход и хранение</a></li>
+            <li><a href="#history">История</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="about">
+            <h2>Что такое штангенциркуль?</h2>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Vernier_caliper.svg/800px-Vernier_caliper.svg.png" alt="Схематическое изображение штангенциркуля" width="600">
+                <figcaption>Схема штангенциркуля с нониусом</figcaption>
+            </figure>
+            <p>Штангенциркуль — это высокоточный измерительный инструмент, предназначенный для определения линейных размеров деталей с высокой точностью. Он позволяет измерять внешние и внутренние размеры, а также глубины отверстий и пазов.</p>
+            <p>Основные части штангенциркуля:</p>
+            <ul>
+                <li>Штанга с основной шкалой</li>
+                <li>Подвижная рамка с нониусом (вспомогательной шкалой)</li>
+                <li>Губки для наружных измерений</li>
+                <li>Губки для внутренних измерений</li>
+                <li>Линейка глубиномера</li>
+            </ul>
+        </section>
+        
+        <section id="types">
+            <h2>Виды штангенциркулей</h2>
+            <div class="types-grid">
+                <article class="type-card">
+                    <h3>Нониевый (механический)</h3>
+                    <p>Классический штангенциркуль с нониусной шкалой для отсчета долей делений. Точность измерения обычно составляет 0,1 мм, 0,05 мм или 0,02 мм.</p>
+                </article>
+                
+                <article class="type-card">
+                    <h3>Цифровой (электронный)</h3>
+                    <p>Оснащен электронным дисплеем, который показывает результат измерения. Удобен в использовании, имеет функции обнуления и переключения единиц измерения.</p>
+                </article>
+                
+                <article class="type-card">
+                    <h3>Стрелочный (часового типа)</h3>
+                    <p>Имеет циферблат со стрелкой для отсчета показаний. Механизм преобразует линейное перемещение в круговое движение стрелки.</p>
+                </article>
+            </div>
+            
+            <h3>Сравнительная таблица видов штангенциркулей</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Тип</th>
+                        <th>Точность</th>
+                        <th>Преимущества</th>
+                        <th>Недостатки</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Нониевый</td>
+                        <td>0,05-0,02 мм</td>
+                        <td>Надежность, не требует питания</td>
+                        <td>Требует навыков чтения шкалы</td>
+                    </tr>
+                    <tr>
+                        <td>Цифровой</td>
+                        <td>0,01 мм</td>
+                        <td>Простота считывания, дополнительные функции</td>
+                        <td>Требует батареи, чувствителен к влаге</td>
+                    </tr>
+                    <tr>
+                        <td>Стрелочный</td>
+                        <td>0,02-0,01 мм</td>
+                        <td>Наглядность, не требует питания</td>
+                        <td>Чувствителен к ударам, требует калибровки</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="usage">
+            <h2>Применение штангенциркуля</h2>
+            <p>Штангенциркуль находит применение в различных областях:</p>
+            <ul>
+                <li><strong>Машиностроение</strong> - контроль размеров деталей</li>
+                <li><strong>Строительство</strong> - измерение толщины материалов</li>
+                <li><strong>Ювелирное дело</strong> - точные измерения мелких деталей</li>
+                <li><strong>Научные исследования</strong> - проведение точных измерений</li>
+                <li><strong>Образование</strong> - обучение основам метрологии</li>
+            </ul>
+            
+            <h3>Как правильно пользоваться штангенциркулем</h3>
+            <ol>
+                <li>Проверьте нулевое положение инструмента</li>
+                <li>Очистите измеряемую поверхность и губки штангенциркуля</li>
+                <li>Аккуратно зажмите деталь между губками без перекоса</li>
+                <li>Зафиксируйте рамку стопорным винтом для точного считывания</li>
+                <li>Считайте показания с основной шкалы и нониуса</li>
+            </ol>
+        </section>
+        
+        <section id="care">
+            <h2>Уход и хранение</h2>
+            <p>Для сохранения точности штангенциркуля необходимо:</p>
+            <ul>
+                <li>Хранить в сухом месте в защитном футляре</li>
+                <li>Регулярно очищать от пыли и загрязнений</li>
+                <li>Избегать падений и ударов</li>
+                <li>Периодически проверять точность по эталонным мерам</li>
+                <li>Смазывать подвижные части специальной смазкой</li>
+            </ul>
+        </section>
+        
+        <section id="history">
+            <h2>История создания</h2>
+            <p>Первый штангенциркуль с нониусом был изобретен португальским математиком Педру Нунишем в XVI веке. Однако современную конструкцию разработал французский инженер Пьер Вернье в 1631 году, чье имя стало нарицательным для этого инструмента во многих языках.</p>
+            <p>В России штангенциркули начали производить в начале XX века на Тульском оружейном заводе. С тех пор инструмент претерпел множество усовершенствований, но основной принцип работы остался неизменным.</p>
+        </section>
+    </main>
+    
+    <aside>
+        <h3>Интересные факты</h3>
+        <ul>
+            <li>Самый точный штангенциркуль может измерять с точностью до 0,001 мм</li>
+            <li>Существуют специализированные штангенциркули для измерения резьбы, зубьев шестерен и других сложных профилей</li>
+            <li>В Японии производят штангенциркули с защитой от воды и пыли по стандарту IP67</li>
+        </ul>
+    </aside>
+    
+    <footer>
+        <p>© 2025 Сайт о штангенциркулях. Все права защищены.</p>
+        <p>Для получения дополнительной информации посетите <a href="https://ru.wikipedia.org/wiki/Штангенциркуль" target="_blank">страницу в Википедии</a>.</p>
+        <p>Сайт разработан в учебных целях.</p>
+    </footer>
+</body>
+</html>
